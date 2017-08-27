@@ -62,7 +62,7 @@ router.post("/signup", function(req, res) {
 });
 
 router.get("/profile", requireLogin, function(req, res) {
-  
+
   res.render("profile", {username: req.user.username});
 });
 
@@ -112,65 +112,6 @@ router.post('/signup', function(req, res){
 });
 
 
-
-///////////////////////////////////////////////////////////
-
-// router.get("/",  function (req,res) {
-//   res.render("index", {users:data})
-//
-// });
-// router.get('/employed',  function(req, res) {
-//   let job = req.params.job;
-//   let employed = [];
-//   data.forEach(function(user) {
-//     if (user.job != null) {
-//       employed.push(user);
-//
-//     }
-//   });
-//   res.render('employed', {users: employed})
-// });
-//
-//
-// router.get('/looking',  function(req, res) {
-//   let job = req.params.job;
-//   let looking = [];
-//   data.forEach(function(user) {
-//   if (user.job == null) {
-//     looking.push(user);
-//
-//   }
-//   });
-//   res.render('looking', {users:looking})
-// });
-//
-//
-//
-// router.get('/profile/:id',  function(req, res) {
-//   let id = req.params.id;
-//
-//   let listing = [];
-//   data.forEach(function(user) {
-//     if (user.id == id) {
-//       listing.push(user);
-//
-//     }
-//   });
-//   console.log(listing);
-//
-//   res.render('profile', {users: listing});
-// });
-
-
-///////////////////////////////////////////////////
-
-
-
-
-
-
-
-module.exports=router;
 
 
 
