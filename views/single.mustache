@@ -1,0 +1,25 @@
+<h2>HIIIIIIIII</h2>
+<a href="/newsnip">Create Snippet and Your Snippets</a>
+<a href="/logout">logout</a>
+<a href="/index">Home page</a>
+
+<div class="info-container">
+<div class="main">
+{{#snippets}}
+<div class="info">
+<p><h2>{{username}}</h2>
+  <p>{{title}}</p>
+  <p>{{code}}</p>
+  <p>{{notes}}</p>
+  <p>{{#language}}<a href="/language{{.}}">{{.}}</a>{{/language}}</p>
+  {{#tags}}<p><a href="{{tags}}">{{.}}</a></p>{{/tags}}
+{{#user}}
+<form action="/{{id}}/delete" method="post">
+  <button type="submit">Delete</button>
+  <p><a href="/{{id}}/edit">Edit</a></p>
+</form>
+{{/user}}
+</div>
+{{/snippets}}
+</div>
+</div>

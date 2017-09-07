@@ -1,0 +1,24 @@
+
+<a href="/newsnip">Create Snippet and Your Snippets</a>
+<a href="/logout">logout</a>
+<a href="/index">index</a>
+
+<div class="main">
+{{#snippets}}
+<div class="info">
+<p><h2>{{username}}</h2>
+  <p>{{title}}</p>
+  <p>{{code}}</p>
+  <p>{{notes}}</p>
+  {{language}}
+  <p>{{#tags}}<a href="{{tags}}">{{.}}</a>{{/tags}}
+  </p>
+{{#user}}
+<form action="/{{id}}/delete" method="post">
+  <button type="submit">Delete</button>
+  <p><a href="/{{id}}/edit">Edit</a></p>
+</form>
+{{/user}}
+</div>
+{{/snippets}}
+</div>

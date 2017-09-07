@@ -1,0 +1,29 @@
+<a href="/logout">logout</a>
+<a href="/index">Home page</a>
+
+<h1>helllllllloooooo</h1>
+<form  action="/newsnip" method="post">
+  <input type="text" name="title" rows="8" cols="80" placeholder="Title"></input>
+  <input type="text" name="code" rows="8" cols="80" placeholder="Please Enter Code"></input>
+  <input type="text" name="notes" rows="8" cols="80" placeholder="Notes"></input>
+  <input type="text" name="language" rows="8" cols="80" placeholder="Language"></input>
+  <input type="text" name="tags" rows="8" cols="80" placeholder="Tag"></input>
+  <button type="submit" name="button" value="{{_id}}">Submit</button>
+</form>
+
+
+{{#snippet}}
+<div>
+<h2>{{username}}</h2>
+<p>{{title}}</p>
+<p>{{code}}</p> <br>
+<p>{{notes}}</p> <br>
+<p>{{#language}}<a href="/language{{.}}">{{.}}</a>{{/language}}</p>
+<p>{{#tags}}<a href="{{tags}}">{{.}}</a>{{/tags}}
+</p>
+<form action="/{{_id}}/delete" method="post">
+  <button type="submit">Delete</button>
+  <p><a href="/{{_id}}/edit">Edit</a></p>
+</form>
+</div>
+{{/snippet}}

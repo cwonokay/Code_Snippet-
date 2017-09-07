@@ -74,6 +74,9 @@ app.use(flash());
 
 app.use(routes);
 
+// if(require.main ==="module"){
 app.listen(3000, function() {
   console.log("App is running on localhost:3000");
 });
+// }
+// module.exports =app;

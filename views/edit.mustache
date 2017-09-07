@@ -1,0 +1,10 @@
+<form  action="/edit/{{id}}" method="post">
+  {{#snippet}}
+  <input type="text" name="title" rows="8" cols="80" placeholder="Title" value={{title}}></input>
+  <input type="text" name="code" rows="8" cols="80" placeholder="Please Enter Code" value={{code}}></input>
+  <input type="text" name="notes" rows="8" cols="80" placeholder="Notes" value={{notes}}></input>
+  <input type="text" name="language" rows="8" cols="80" placeholder="Language" value={{language}}></input>
+  <input type="text" name="tags" rows="8" cols="80" placeholder="Tag"></input>
+<button type="submit" name="button" value="{{_id}}">Submit</button>
+{{/snippet}}
+</form>
